@@ -1,0 +1,241 @@
+record_id,drug_name,generic_name,brand_name,plan_id,plan_name,tier,copay,coverage_status,requires_pa,pa_criteria,requires_step_therapy,step_therapy_alternatives,quantity_limit,data_source
+REC_0001,metformin (Glucophage),metformin,Glucophage,PLAN_BASIC,MediAssist Basic,2,25.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0002,metformin (Glucophage),metformin,Glucophage,PLAN_PLUS,MediAssist Plus,1,5.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0003,metformin (Glucophage),metformin,Glucophage,PLAN_PREMIUM,MediAssist Premium,1,0.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0004,lisinopril (Zestril),lisinopril,Zestril,PLAN_BASIC,MediAssist Basic,2,25.00,covered,false,,false,,SYNTHETIC LIMIT: 30 units per 30 days,SYNTHETIC_DEMO_DATA
+REC_0005,lisinopril (Zestril),lisinopril,Zestril,PLAN_PLUS,MediAssist Plus,1,5.00,covered,false,,false,,SYNTHETIC LIMIT: 90 units per 90 days,SYNTHETIC_DEMO_DATA
+REC_0006,lisinopril (Zestril),lisinopril,Zestril,PLAN_PREMIUM,MediAssist Premium,1,0.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0007,atorvastatin (Lipitor),atorvastatin,Lipitor,PLAN_BASIC,MediAssist Basic,4,90.00,restricted,true,SYNTHETIC RULE: Demonstration criteria require documented diagnosis code on file.,true,SYNTHETIC DEMO: try generic first-line alternative B,SYNTHETIC LIMIT: 60 units per 30 days,SYNTHETIC_DEMO_DATA
+REC_0008,atorvastatin (Lipitor),atorvastatin,Lipitor,PLAN_PLUS,MediAssist Plus,3,40.00,covered,false,,false,,SYNTHETIC LIMIT: 90 units per 90 days,SYNTHETIC_DEMO_DATA
+REC_0009,atorvastatin (Lipitor),atorvastatin,Lipitor,PLAN_PREMIUM,MediAssist Premium,2,10.00,covered,false,,false,,SYNTHETIC LIMIT: 90 units per 90 days,SYNTHETIC_DEMO_DATA
+REC_0010,amlodipine (Norvasc),amlodipine,Norvasc,PLAN_BASIC,MediAssist Basic,5,150.00,covered,false,,false,,SYNTHETIC LIMIT: 30 units per 30 days,SYNTHETIC_DEMO_DATA
+REC_0011,amlodipine (Norvasc),amlodipine,Norvasc,PLAN_PLUS,MediAssist Plus,4,75.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0012,amlodipine (Norvasc),amlodipine,Norvasc,PLAN_PREMIUM,MediAssist Premium,3,30.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0013,metoprolol succinate (Toprol-XL),metoprolol succinate,Toprol-XL,PLAN_BASIC,MediAssist Basic,2,25.00,covered,false,,false,,SYNTHETIC LIMIT: 1 pen per 28 days,SYNTHETIC_DEMO_DATA
+REC_0014,metoprolol succinate (Toprol-XL),metoprolol succinate,Toprol-XL,PLAN_PLUS,MediAssist Plus,1,5.00,covered,false,,false,,SYNTHETIC LIMIT: 60 units per 30 days,SYNTHETIC_DEMO_DATA
+REC_0015,metoprolol succinate (Toprol-XL),metoprolol succinate,Toprol-XL,PLAN_PREMIUM,MediAssist Premium,1,0.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0016,omeprazole (Prilosec),omeprazole,Prilosec,PLAN_BASIC,MediAssist Basic,3,50.00,restricted,true,SYNTHETIC RULE: Demonstration criteria require documented trial of a first-line agent.,true,SYNTHETIC DEMO: try two lower-tier demo alternatives,SYNTHETIC LIMIT: 60 units per 30 days,SYNTHETIC_DEMO_DATA
+REC_0017,omeprazole (Prilosec),omeprazole,Prilosec,PLAN_PLUS,MediAssist Plus,2,20.00,covered,false,,false,,SYNTHETIC LIMIT: 30 units per 30 days,SYNTHETIC_DEMO_DATA
+REC_0018,omeprazole (Prilosec),omeprazole,Prilosec,PLAN_PREMIUM,MediAssist Premium,1,0.00,covered,false,,false,,SYNTHETIC LIMIT: 1 pen per 28 days,SYNTHETIC_DEMO_DATA
+REC_0019,losartan (Cozaar),losartan,Cozaar,PLAN_BASIC,MediAssist Basic,2,25.00,covered,false,,false,,SYNTHETIC LIMIT: 30 units per 30 days,SYNTHETIC_DEMO_DATA
+REC_0020,losartan (Cozaar),losartan,Cozaar,PLAN_PLUS,MediAssist Plus,1,5.00,covered,false,,false,,SYNTHETIC LIMIT: 2 inhalers per 30 days,SYNTHETIC_DEMO_DATA
+REC_0021,losartan (Cozaar),losartan,Cozaar,PLAN_PREMIUM,MediAssist Premium,1,0.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0022,albuterol (Ventolin HFA),albuterol,Ventolin HFA,PLAN_BASIC,MediAssist Basic,5,150.00,restricted,true,SYNTHETIC RULE: Demonstration criteria require documented diagnosis code on file.,true,SYNTHETIC DEMO: try preferred demo alternative X or Y,SYNTHETIC LIMIT: 30 units per 30 days,SYNTHETIC_DEMO_DATA
+REC_0023,albuterol (Ventolin HFA),albuterol,Ventolin HFA,PLAN_PLUS,MediAssist Plus,4,75.00,covered,false,,false,,SYNTHETIC LIMIT: 90 units per 90 days,SYNTHETIC_DEMO_DATA
+REC_0024,albuterol (Ventolin HFA),albuterol,Ventolin HFA,PLAN_PREMIUM,MediAssist Premium,3,30.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0025,gabapentin (Neurontin),gabapentin,Neurontin,PLAN_BASIC,MediAssist Basic,5,150.00,covered,true,SYNTHETIC RULE: Demonstration criteria require recent lab results on file.,false,,SYNTHETIC LIMIT: 2 inhalers per 30 days,SYNTHETIC_DEMO_DATA
+REC_0026,gabapentin (Neurontin),gabapentin,Neurontin,PLAN_PLUS,MediAssist Plus,4,75.00,restricted,true,SYNTHETIC RULE: Demonstration criteria require documented trial of a first-line agent.,true,SYNTHETIC DEMO: try two lower-tier demo alternatives,SYNTHETIC LIMIT: 60 units per 30 days,SYNTHETIC_DEMO_DATA
+REC_0027,gabapentin (Neurontin),gabapentin,Neurontin,PLAN_PREMIUM,MediAssist Premium,3,30.00,covered,false,,false,,SYNTHETIC LIMIT: 90 units per 90 days,SYNTHETIC_DEMO_DATA
+REC_0028,sertraline (Zoloft),sertraline,Zoloft,PLAN_BASIC,MediAssist Basic,5,150.00,restricted,true,SYNTHETIC RULE: Demonstration criteria require recent lab results on file.,false,,SYNTHETIC LIMIT: 1 pen per 28 days,SYNTHETIC_DEMO_DATA
+REC_0029,sertraline (Zoloft),sertraline,Zoloft,PLAN_PLUS,MediAssist Plus,4,75.00,covered,false,,false,,SYNTHETIC LIMIT: 30 units per 30 days,SYNTHETIC_DEMO_DATA
+REC_0030,sertraline (Zoloft),sertraline,Zoloft,PLAN_PREMIUM,MediAssist Premium,3,30.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0031,levothyroxine (Synthroid),levothyroxine,Synthroid,PLAN_BASIC,MediAssist Basic,3,50.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0032,levothyroxine (Synthroid),levothyroxine,Synthroid,PLAN_PLUS,MediAssist Plus,2,20.00,covered,false,,false,,SYNTHETIC LIMIT: 1 pen per 28 days,SYNTHETIC_DEMO_DATA
+REC_0033,levothyroxine (Synthroid),levothyroxine,Synthroid,PLAN_PREMIUM,MediAssist Premium,1,0.00,covered,false,,false,,SYNTHETIC LIMIT: 30 units per 30 days,SYNTHETIC_DEMO_DATA
+REC_0034,simvastatin (Zocor),simvastatin,Zocor,PLAN_BASIC,MediAssist Basic,4,90.00,restricted,true,SYNTHETIC RULE: Demonstration criteria require documented diagnosis code on file.,true,SYNTHETIC DEMO: try generic first-line alternative B,SYNTHETIC LIMIT: 90 units per 90 days,SYNTHETIC_DEMO_DATA
+REC_0035,simvastatin (Zocor),simvastatin,Zocor,PLAN_PLUS,MediAssist Plus,3,40.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0036,simvastatin (Zocor),simvastatin,Zocor,PLAN_PREMIUM,MediAssist Premium,2,10.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0037,hydrochlorothiazide,hydrochlorothiazide,,PLAN_BASIC,MediAssist Basic,5,150.00,excluded,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0038,hydrochlorothiazide,hydrochlorothiazide,,PLAN_PLUS,MediAssist Plus,5,120.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0039,hydrochlorothiazide,hydrochlorothiazide,,PLAN_PREMIUM,MediAssist Premium,4,60.00,restricted,true,SYNTHETIC RULE: Demonstration criteria require documented trial of a first-line agent.,true,SYNTHETIC DEMO: try generic first-line alternative B,SYNTHETIC LIMIT: 90 units per 90 days,SYNTHETIC_DEMO_DATA
+REC_0040,furosemide (Lasix),furosemide,Lasix,PLAN_BASIC,MediAssist Basic,5,150.00,covered,false,,false,,SYNTHETIC LIMIT: 90 units per 90 days,SYNTHETIC_DEMO_DATA
+REC_0041,furosemide (Lasix),furosemide,Lasix,PLAN_PLUS,MediAssist Plus,5,120.00,restricted,true,SYNTHETIC RULE: Demonstration criteria require recent lab results on file.,true,SYNTHETIC DEMO: try preferred demo alternative X or Y,SYNTHETIC LIMIT: 90 units per 90 days,SYNTHETIC_DEMO_DATA
+REC_0042,furosemide (Lasix),furosemide,Lasix,PLAN_PREMIUM,MediAssist Premium,4,60.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0043,pantoprazole (Protonix),pantoprazole,Protonix,PLAN_BASIC,MediAssist Basic,2,25.00,covered,false,,false,,SYNTHETIC LIMIT: 1 pen per 28 days,SYNTHETIC_DEMO_DATA
+REC_0044,pantoprazole (Protonix),pantoprazole,Protonix,PLAN_PLUS,MediAssist Plus,1,5.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0045,pantoprazole (Protonix),pantoprazole,Protonix,PLAN_PREMIUM,MediAssist Premium,1,0.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0046,escitalopram (Lexapro),escitalopram,Lexapro,PLAN_BASIC,MediAssist Basic,4,90.00,restricted,true,SYNTHETIC RULE: Demonstration criteria require documented diagnosis code on file.,true,SYNTHETIC DEMO: try two lower-tier demo alternatives,SYNTHETIC LIMIT: 1 pen per 28 days,SYNTHETIC_DEMO_DATA
+REC_0047,escitalopram (Lexapro),escitalopram,Lexapro,PLAN_PLUS,MediAssist Plus,3,40.00,restricted,true,SYNTHETIC RULE: Demonstration criteria require documented contraindication to alternatives.,true,SYNTHETIC DEMO: try generic first-line alternative B,SYNTHETIC LIMIT: 2 inhalers per 30 days,SYNTHETIC_DEMO_DATA
+REC_0048,escitalopram (Lexapro),escitalopram,Lexapro,PLAN_PREMIUM,MediAssist Premium,2,10.00,covered,false,,false,,SYNTHETIC LIMIT: 60 units per 30 days,SYNTHETIC_DEMO_DATA
+REC_0049,bupropion (Wellbutrin XL),bupropion,Wellbutrin XL,PLAN_BASIC,MediAssist Basic,2,25.00,covered,false,,false,,SYNTHETIC LIMIT: 2 inhalers per 30 days,SYNTHETIC_DEMO_DATA
+REC_0050,bupropion (Wellbutrin XL),bupropion,Wellbutrin XL,PLAN_PLUS,MediAssist Plus,1,5.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0051,bupropion (Wellbutrin XL),bupropion,Wellbutrin XL,PLAN_PREMIUM,MediAssist Premium,1,0.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0052,fluoxetine (Prozac),fluoxetine,Prozac,PLAN_BASIC,MediAssist Basic,2,25.00,covered,false,,false,,SYNTHETIC LIMIT: 30 units per 30 days,SYNTHETIC_DEMO_DATA
+REC_0053,fluoxetine (Prozac),fluoxetine,Prozac,PLAN_PLUS,MediAssist Plus,1,5.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0054,fluoxetine (Prozac),fluoxetine,Prozac,PLAN_PREMIUM,MediAssist Premium,1,0.00,covered,false,,false,,SYNTHETIC LIMIT: 1 pen per 28 days,SYNTHETIC_DEMO_DATA
+REC_0055,montelukast (Singulair),montelukast,Singulair,PLAN_BASIC,MediAssist Basic,3,50.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0056,montelukast (Singulair),montelukast,Singulair,PLAN_PLUS,MediAssist Plus,2,20.00,covered,false,,false,,SYNTHETIC LIMIT: 2 inhalers per 30 days,SYNTHETIC_DEMO_DATA
+REC_0057,montelukast (Singulair),montelukast,Singulair,PLAN_PREMIUM,MediAssist Premium,1,0.00,covered,false,,false,,SYNTHETIC LIMIT: 2 inhalers per 30 days,SYNTHETIC_DEMO_DATA
+REC_0058,rosuvastatin (Crestor),rosuvastatin,Crestor,PLAN_BASIC,MediAssist Basic,5,150.00,covered,false,,false,,SYNTHETIC LIMIT: 30 units per 30 days,SYNTHETIC_DEMO_DATA
+REC_0059,rosuvastatin (Crestor),rosuvastatin,Crestor,PLAN_PLUS,MediAssist Plus,5,120.00,restricted,true,SYNTHETIC RULE: Demonstration criteria require documented trial of a first-line agent.,true,SYNTHETIC DEMO: try two lower-tier demo alternatives,,SYNTHETIC_DEMO_DATA
+REC_0060,rosuvastatin (Crestor),rosuvastatin,Crestor,PLAN_PREMIUM,MediAssist Premium,4,60.00,restricted,true,SYNTHETIC RULE: Demonstration criteria require documented trial of a first-line agent.,true,SYNTHETIC DEMO: try two lower-tier demo alternatives,SYNTHETIC LIMIT: 1 pen per 28 days,SYNTHETIC_DEMO_DATA
+REC_0061,carvedilol (Coreg),carvedilol,Coreg,PLAN_BASIC,MediAssist Basic,3,50.00,restricted,true,SYNTHETIC RULE: Demonstration criteria require recent lab results on file.,false,,SYNTHETIC LIMIT: 60 units per 30 days,SYNTHETIC_DEMO_DATA
+REC_0062,carvedilol (Coreg),carvedilol,Coreg,PLAN_PLUS,MediAssist Plus,2,20.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0063,carvedilol (Coreg),carvedilol,Coreg,PLAN_PREMIUM,MediAssist Premium,1,0.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0064,tamsulosin (Flomax),tamsulosin,Flomax,PLAN_BASIC,MediAssist Basic,5,150.00,restricted,true,SYNTHETIC RULE: Demonstration criteria require specialist consultation note.,false,,,SYNTHETIC_DEMO_DATA
+REC_0065,tamsulosin (Flomax),tamsulosin,Flomax,PLAN_PLUS,MediAssist Plus,5,120.00,covered,false,,false,,SYNTHETIC LIMIT: 30 units per 30 days,SYNTHETIC_DEMO_DATA
+REC_0066,tamsulosin (Flomax),tamsulosin,Flomax,PLAN_PREMIUM,MediAssist Premium,4,60.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0067,prednisone (Deltasone),prednisone,Deltasone,PLAN_BASIC,MediAssist Basic,3,50.00,restricted,true,SYNTHETIC RULE: Demonstration criteria require documented contraindication to alternatives.,false,,SYNTHETIC LIMIT: 2 inhalers per 30 days,SYNTHETIC_DEMO_DATA
+REC_0068,prednisone (Deltasone),prednisone,Deltasone,PLAN_PLUS,MediAssist Plus,2,20.00,covered,false,,false,,SYNTHETIC LIMIT: 2 inhalers per 30 days,SYNTHETIC_DEMO_DATA
+REC_0069,prednisone (Deltasone),prednisone,Deltasone,PLAN_PREMIUM,MediAssist Premium,1,0.00,covered,false,,false,,SYNTHETIC LIMIT: 30 units per 30 days,SYNTHETIC_DEMO_DATA
+REC_0070,trazodone (Desyrel),trazodone,Desyrel,PLAN_BASIC,MediAssist Basic,5,150.00,excluded,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0071,trazodone (Desyrel),trazodone,Desyrel,PLAN_PLUS,MediAssist Plus,5,120.00,restricted,true,SYNTHETIC RULE: Demonstration criteria require specialist consultation note.,false,,SYNTHETIC LIMIT: 2 inhalers per 30 days,SYNTHETIC_DEMO_DATA
+REC_0072,trazodone (Desyrel),trazodone,Desyrel,PLAN_PREMIUM,MediAssist Premium,4,60.00,restricted,true,SYNTHETIC RULE: Demonstration criteria require documented trial of a first-line agent.,true,SYNTHETIC DEMO: try two lower-tier demo alternatives,SYNTHETIC LIMIT: 60 units per 30 days,SYNTHETIC_DEMO_DATA
+REC_0073,clopidogrel (Plavix),clopidogrel,Plavix,PLAN_BASIC,MediAssist Basic,2,25.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0074,clopidogrel (Plavix),clopidogrel,Plavix,PLAN_PLUS,MediAssist Plus,1,5.00,covered,false,,false,,SYNTHETIC LIMIT: 2 inhalers per 30 days,SYNTHETIC_DEMO_DATA
+REC_0075,clopidogrel (Plavix),clopidogrel,Plavix,PLAN_PREMIUM,MediAssist Premium,1,0.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0076,warfarin (Coumadin),warfarin,Coumadin,PLAN_BASIC,MediAssist Basic,3,50.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0077,warfarin (Coumadin),warfarin,Coumadin,PLAN_PLUS,MediAssist Plus,2,20.00,covered,false,,false,,SYNTHETIC LIMIT: 60 units per 30 days,SYNTHETIC_DEMO_DATA
+REC_0078,warfarin (Coumadin),warfarin,Coumadin,PLAN_PREMIUM,MediAssist Premium,1,0.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0079,apixaban (Eliquis),apixaban,Eliquis,PLAN_BASIC,MediAssist Basic,5,150.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0080,apixaban (Eliquis),apixaban,Eliquis,PLAN_PLUS,MediAssist Plus,4,75.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0081,apixaban (Eliquis),apixaban,Eliquis,PLAN_PREMIUM,MediAssist Premium,3,30.00,restricted,true,SYNTHETIC RULE: Demonstration criteria require recent lab results on file.,false,,,SYNTHETIC_DEMO_DATA
+REC_0082,rivaroxaban (Xarelto),rivaroxaban,Xarelto,PLAN_BASIC,MediAssist Basic,5,150.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0083,rivaroxaban (Xarelto),rivaroxaban,Xarelto,PLAN_PLUS,MediAssist Plus,5,120.00,covered,true,SYNTHETIC RULE: Demonstration criteria require recent lab results on file.,false,,SYNTHETIC LIMIT: 2 inhalers per 30 days,SYNTHETIC_DEMO_DATA
+REC_0084,rivaroxaban (Xarelto),rivaroxaban,Xarelto,PLAN_PREMIUM,MediAssist Premium,4,60.00,restricted,true,SYNTHETIC RULE: Demonstration criteria require documented diagnosis code on file.,true,SYNTHETIC DEMO: try generic first-line alternative B,,SYNTHETIC_DEMO_DATA
+REC_0085,dabigatran (Pradaxa),dabigatran,Pradaxa,PLAN_BASIC,MediAssist Basic,2,25.00,covered,false,,false,,SYNTHETIC LIMIT: 2 inhalers per 30 days,SYNTHETIC_DEMO_DATA
+REC_0086,dabigatran (Pradaxa),dabigatran,Pradaxa,PLAN_PLUS,MediAssist Plus,1,5.00,covered,false,,false,,SYNTHETIC LIMIT: 2 inhalers per 30 days,SYNTHETIC_DEMO_DATA
+REC_0087,dabigatran (Pradaxa),dabigatran,Pradaxa,PLAN_PREMIUM,MediAssist Premium,1,0.00,covered,false,,false,,SYNTHETIC LIMIT: 30 units per 30 days,SYNTHETIC_DEMO_DATA
+REC_0088,insulin glargine (Lantus),insulin glargine,Lantus,PLAN_BASIC,MediAssist Basic,5,150.00,excluded,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0089,insulin glargine (Lantus),insulin glargine,Lantus,PLAN_PLUS,MediAssist Plus,4,75.00,covered,false,,false,,SYNTHETIC LIMIT: 60 units per 30 days,SYNTHETIC_DEMO_DATA
+REC_0090,insulin glargine (Lantus),insulin glargine,Lantus,PLAN_PREMIUM,MediAssist Premium,3,30.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0091,insulin lispro (Humalog),insulin lispro,Humalog,PLAN_BASIC,MediAssist Basic,3,50.00,restricted,true,SYNTHETIC RULE: Demonstration criteria require documented diagnosis code on file.,true,SYNTHETIC DEMO: try generic first-line alternative B,,SYNTHETIC_DEMO_DATA
+REC_0092,insulin lispro (Humalog),insulin lispro,Humalog,PLAN_PLUS,MediAssist Plus,2,20.00,covered,false,,false,,SYNTHETIC LIMIT: 90 units per 90 days,SYNTHETIC_DEMO_DATA
+REC_0093,insulin lispro (Humalog),insulin lispro,Humalog,PLAN_PREMIUM,MediAssist Premium,1,0.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0094,insulin aspart (Novolog),insulin aspart,Novolog,PLAN_BASIC,MediAssist Basic,4,90.00,restricted,true,SYNTHETIC RULE: Demonstration criteria require specialist consultation note.,true,SYNTHETIC DEMO: try generic first-line alternative A,SYNTHETIC LIMIT: 2 inhalers per 30 days,SYNTHETIC_DEMO_DATA
+REC_0095,insulin aspart (Novolog),insulin aspart,Novolog,PLAN_PLUS,MediAssist Plus,3,40.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0096,insulin aspart (Novolog),insulin aspart,Novolog,PLAN_PREMIUM,MediAssist Premium,2,10.00,covered,false,,false,,SYNTHETIC LIMIT: 60 units per 30 days,SYNTHETIC_DEMO_DATA
+REC_0097,semaglutide (Ozempic),semaglutide,Ozempic,PLAN_BASIC,MediAssist Basic,2,25.00,covered,false,,false,,SYNTHETIC LIMIT: 30 units per 30 days,SYNTHETIC_DEMO_DATA
+REC_0098,semaglutide (Ozempic),semaglutide,Ozempic,PLAN_PLUS,MediAssist Plus,1,5.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0099,semaglutide (Ozempic),semaglutide,Ozempic,PLAN_PREMIUM,MediAssist Premium,1,0.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0100,liraglutide (Victoza),liraglutide,Victoza,PLAN_BASIC,MediAssist Basic,2,25.00,covered,false,,false,,SYNTHETIC LIMIT: 30 units per 30 days,SYNTHETIC_DEMO_DATA
+REC_0101,liraglutide (Victoza),liraglutide,Victoza,PLAN_PLUS,MediAssist Plus,1,5.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0102,liraglutide (Victoza),liraglutide,Victoza,PLAN_PREMIUM,MediAssist Premium,1,0.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0103,dulaglutide (Trulicity),dulaglutide,Trulicity,PLAN_BASIC,MediAssist Basic,3,50.00,restricted,true,SYNTHETIC RULE: Demonstration criteria require documented contraindication to alternatives.,false,,SYNTHETIC LIMIT: 1 pen per 28 days,SYNTHETIC_DEMO_DATA
+REC_0104,dulaglutide (Trulicity),dulaglutide,Trulicity,PLAN_PLUS,MediAssist Plus,2,20.00,covered,false,,false,,SYNTHETIC LIMIT: 1 pen per 28 days,SYNTHETIC_DEMO_DATA
+REC_0105,dulaglutide (Trulicity),dulaglutide,Trulicity,PLAN_PREMIUM,MediAssist Premium,1,0.00,covered,false,,false,,SYNTHETIC LIMIT: 2 inhalers per 30 days,SYNTHETIC_DEMO_DATA
+REC_0106,empagliflozin (Jardiance),empagliflozin,Jardiance,PLAN_BASIC,MediAssist Basic,5,150.00,excluded,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0107,empagliflozin (Jardiance),empagliflozin,Jardiance,PLAN_PLUS,MediAssist Plus,4,75.00,covered,false,,false,,SYNTHETIC LIMIT: 2 inhalers per 30 days,SYNTHETIC_DEMO_DATA
+REC_0108,empagliflozin (Jardiance),empagliflozin,Jardiance,PLAN_PREMIUM,MediAssist Premium,3,30.00,restricted,true,SYNTHETIC RULE: Demonstration criteria require specialist consultation note.,false,,,SYNTHETIC_DEMO_DATA
+REC_0109,dapagliflozin (Farxiga),dapagliflozin,Farxiga,PLAN_BASIC,MediAssist Basic,3,50.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0110,dapagliflozin (Farxiga),dapagliflozin,Farxiga,PLAN_PLUS,MediAssist Plus,2,20.00,covered,false,,false,,SYNTHETIC LIMIT: 1 pen per 28 days,SYNTHETIC_DEMO_DATA
+REC_0111,dapagliflozin (Farxiga),dapagliflozin,Farxiga,PLAN_PREMIUM,MediAssist Premium,1,0.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0112,canagliflozin (Invokana),canagliflozin,Invokana,PLAN_BASIC,MediAssist Basic,2,25.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0113,canagliflozin (Invokana),canagliflozin,Invokana,PLAN_PLUS,MediAssist Plus,1,5.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0114,canagliflozin (Invokana),canagliflozin,Invokana,PLAN_PREMIUM,MediAssist Premium,1,0.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0115,sitagliptin (Januvia),sitagliptin,Januvia,PLAN_BASIC,MediAssist Basic,5,150.00,covered,true,SYNTHETIC RULE: Demonstration criteria require specialist consultation note.,false,,,SYNTHETIC_DEMO_DATA
+REC_0116,sitagliptin (Januvia),sitagliptin,Januvia,PLAN_PLUS,MediAssist Plus,4,75.00,restricted,true,SYNTHETIC RULE: Demonstration criteria require documented trial of a first-line agent.,true,SYNTHETIC DEMO: try two lower-tier demo alternatives,,SYNTHETIC_DEMO_DATA
+REC_0117,sitagliptin (Januvia),sitagliptin,Januvia,PLAN_PREMIUM,MediAssist Premium,3,30.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0118,linagliptin (Tradjenta),linagliptin,Tradjenta,PLAN_BASIC,MediAssist Basic,3,50.00,restricted,false,,true,SYNTHETIC DEMO: try generic first-line alternative A,SYNTHETIC LIMIT: 1 pen per 28 days,SYNTHETIC_DEMO_DATA
+REC_0119,linagliptin (Tradjenta),linagliptin,Tradjenta,PLAN_PLUS,MediAssist Plus,2,20.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0120,linagliptin (Tradjenta),linagliptin,Tradjenta,PLAN_PREMIUM,MediAssist Premium,1,0.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0121,glipizide (Glucotrol),glipizide,Glucotrol,PLAN_BASIC,MediAssist Basic,2,25.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0122,glipizide (Glucotrol),glipizide,Glucotrol,PLAN_PLUS,MediAssist Plus,1,5.00,covered,false,,false,,SYNTHETIC LIMIT: 30 units per 30 days,SYNTHETIC_DEMO_DATA
+REC_0123,glipizide (Glucotrol),glipizide,Glucotrol,PLAN_PREMIUM,MediAssist Premium,1,0.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0124,pioglitazone (Actos),pioglitazone,Actos,PLAN_BASIC,MediAssist Basic,5,150.00,restricted,true,SYNTHETIC RULE: Demonstration criteria require documented contraindication to alternatives.,true,SYNTHETIC DEMO: try generic first-line alternative A,SYNTHETIC LIMIT: 90 units per 90 days,SYNTHETIC_DEMO_DATA
+REC_0125,pioglitazone (Actos),pioglitazone,Actos,PLAN_PLUS,MediAssist Plus,5,120.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0126,pioglitazone (Actos),pioglitazone,Actos,PLAN_PREMIUM,MediAssist Premium,4,60.00,restricted,true,SYNTHETIC RULE: Demonstration criteria require documented diagnosis code on file.,true,SYNTHETIC DEMO: try preferred demo alternative X or Y,,SYNTHETIC_DEMO_DATA
+REC_0127,sacubitril/valsartan (Entresto),sacubitril/valsartan,Entresto,PLAN_BASIC,MediAssist Basic,5,150.00,excluded,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0128,sacubitril/valsartan (Entresto),sacubitril/valsartan,Entresto,PLAN_PLUS,MediAssist Plus,5,120.00,restricted,false,,true,SYNTHETIC DEMO: try preferred demo alternative X or Y,SYNTHETIC LIMIT: 30 units per 30 days,SYNTHETIC_DEMO_DATA
+REC_0129,sacubitril/valsartan (Entresto),sacubitril/valsartan,Entresto,PLAN_PREMIUM,MediAssist Premium,4,60.00,covered,true,SYNTHETIC RULE: Demonstration criteria require documented contraindication to alternatives.,false,,SYNTHETIC LIMIT: 90 units per 90 days,SYNTHETIC_DEMO_DATA
+REC_0130,ticagrelor (Brilinta),ticagrelor,Brilinta,PLAN_BASIC,MediAssist Basic,5,150.00,covered,false,,false,,SYNTHETIC LIMIT: 90 units per 90 days,SYNTHETIC_DEMO_DATA
+REC_0131,ticagrelor (Brilinta),ticagrelor,Brilinta,PLAN_PLUS,MediAssist Plus,5,120.00,covered,false,,false,,SYNTHETIC LIMIT: 30 units per 30 days,SYNTHETIC_DEMO_DATA
+REC_0132,ticagrelor (Brilinta),ticagrelor,Brilinta,PLAN_PREMIUM,MediAssist Premium,4,60.00,restricted,true,SYNTHETIC RULE: Demonstration criteria require documented diagnosis code on file.,false,,,SYNTHETIC_DEMO_DATA
+REC_0133,ezetimibe (Zetia),ezetimibe,Zetia,PLAN_BASIC,MediAssist Basic,4,90.00,restricted,true,SYNTHETIC RULE: Demonstration criteria require specialist consultation note.,true,SYNTHETIC DEMO: try preferred demo alternative X or Y,,SYNTHETIC_DEMO_DATA
+REC_0134,ezetimibe (Zetia),ezetimibe,Zetia,PLAN_PLUS,MediAssist Plus,3,40.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0135,ezetimibe (Zetia),ezetimibe,Zetia,PLAN_PREMIUM,MediAssist Premium,2,10.00,covered,false,,false,,SYNTHETIC LIMIT: 60 units per 30 days,SYNTHETIC_DEMO_DATA
+REC_0136,evolocumab (Repatha),evolocumab,Repatha,PLAN_BASIC,MediAssist Basic,4,90.00,covered,true,SYNTHETIC RULE: Demonstration criteria require documented trial of a first-line agent.,false,,,SYNTHETIC_DEMO_DATA
+REC_0137,evolocumab (Repatha),evolocumab,Repatha,PLAN_PLUS,MediAssist Plus,3,40.00,covered,false,,false,,SYNTHETIC LIMIT: 2 inhalers per 30 days,SYNTHETIC_DEMO_DATA
+REC_0138,evolocumab (Repatha),evolocumab,Repatha,PLAN_PREMIUM,MediAssist Premium,2,10.00,covered,false,,false,,SYNTHETIC LIMIT: 2 inhalers per 30 days,SYNTHETIC_DEMO_DATA
+REC_0139,adalimumab (Humira),adalimumab,Humira,PLAN_BASIC,MediAssist Basic,5,150.00,excluded,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0140,adalimumab (Humira),adalimumab,Humira,PLAN_PLUS,MediAssist Plus,4,75.00,restricted,true,SYNTHETIC RULE: Demonstration criteria require recent lab results on file.,false,,SYNTHETIC LIMIT: 60 units per 30 days,SYNTHETIC_DEMO_DATA
+REC_0141,adalimumab (Humira),adalimumab,Humira,PLAN_PREMIUM,MediAssist Premium,3,30.00,restricted,false,,true,SYNTHETIC DEMO: try generic first-line alternative A,SYNTHETIC LIMIT: 60 units per 30 days,SYNTHETIC_DEMO_DATA
+REC_0142,etanercept (Enbrel),etanercept,Enbrel,PLAN_BASIC,MediAssist Basic,2,25.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0143,etanercept (Enbrel),etanercept,Enbrel,PLAN_PLUS,MediAssist Plus,1,5.00,covered,false,,false,,SYNTHETIC LIMIT: 30 units per 30 days,SYNTHETIC_DEMO_DATA
+REC_0144,etanercept (Enbrel),etanercept,Enbrel,PLAN_PREMIUM,MediAssist Premium,1,0.00,covered,false,,false,,SYNTHETIC LIMIT: 90 units per 90 days,SYNTHETIC_DEMO_DATA
+REC_0145,ustekinumab (Stelara),ustekinumab,Stelara,PLAN_BASIC,MediAssist Basic,4,90.00,restricted,true,SYNTHETIC RULE: Demonstration criteria require specialist consultation note.,false,,,SYNTHETIC_DEMO_DATA
+REC_0146,ustekinumab (Stelara),ustekinumab,Stelara,PLAN_PLUS,MediAssist Plus,3,40.00,covered,false,,false,,SYNTHETIC LIMIT: 1 pen per 28 days,SYNTHETIC_DEMO_DATA
+REC_0147,ustekinumab (Stelara),ustekinumab,Stelara,PLAN_PREMIUM,MediAssist Premium,2,10.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0148,secukinumab (Cosentyx),secukinumab,Cosentyx,PLAN_BASIC,MediAssist Basic,4,90.00,restricted,true,SYNTHETIC RULE: Demonstration criteria require documented trial of a first-line agent.,false,,SYNTHETIC LIMIT: 90 units per 90 days,SYNTHETIC_DEMO_DATA
+REC_0149,secukinumab (Cosentyx),secukinumab,Cosentyx,PLAN_PLUS,MediAssist Plus,3,40.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0150,secukinumab (Cosentyx),secukinumab,Cosentyx,PLAN_PREMIUM,MediAssist Premium,2,10.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0151,tofacitinib (Xeljanz),tofacitinib,Xeljanz,PLAN_BASIC,MediAssist Basic,3,50.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0152,tofacitinib (Xeljanz),tofacitinib,Xeljanz,PLAN_PLUS,MediAssist Plus,2,20.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0153,tofacitinib (Xeljanz),tofacitinib,Xeljanz,PLAN_PREMIUM,MediAssist Premium,1,0.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0154,upadacitinib (Rinvoq),upadacitinib,Rinvoq,PLAN_BASIC,MediAssist Basic,4,90.00,restricted,true,SYNTHETIC RULE: Demonstration criteria require specialist consultation note.,true,SYNTHETIC DEMO: try preferred demo alternative X or Y,,SYNTHETIC_DEMO_DATA
+REC_0155,upadacitinib (Rinvoq),upadacitinib,Rinvoq,PLAN_PLUS,MediAssist Plus,3,40.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0156,upadacitinib (Rinvoq),upadacitinib,Rinvoq,PLAN_PREMIUM,MediAssist Premium,2,10.00,covered,false,,false,,SYNTHETIC LIMIT: 60 units per 30 days,SYNTHETIC_DEMO_DATA
+REC_0157,methotrexate (Trexall),methotrexate,Trexall,PLAN_BASIC,MediAssist Basic,2,25.00,covered,false,,false,,SYNTHETIC LIMIT: 90 units per 90 days,SYNTHETIC_DEMO_DATA
+REC_0158,methotrexate (Trexall),methotrexate,Trexall,PLAN_PLUS,MediAssist Plus,1,5.00,covered,false,,false,,SYNTHETIC LIMIT: 60 units per 30 days,SYNTHETIC_DEMO_DATA
+REC_0159,methotrexate (Trexall),methotrexate,Trexall,PLAN_PREMIUM,MediAssist Premium,1,0.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0160,hydroxychloroquine (Plaquenil),hydroxychloroquine,Plaquenil,PLAN_BASIC,MediAssist Basic,5,150.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0161,hydroxychloroquine (Plaquenil),hydroxychloroquine,Plaquenil,PLAN_PLUS,MediAssist Plus,4,75.00,restricted,true,SYNTHETIC RULE: Demonstration criteria require documented diagnosis code on file.,true,SYNTHETIC DEMO: try generic first-line alternative B,SYNTHETIC LIMIT: 90 units per 90 days,SYNTHETIC_DEMO_DATA
+REC_0162,hydroxychloroquine (Plaquenil),hydroxychloroquine,Plaquenil,PLAN_PREMIUM,MediAssist Premium,3,30.00,covered,false,,false,,SYNTHETIC LIMIT: 2 inhalers per 30 days,SYNTHETIC_DEMO_DATA
+REC_0163,dupilumab (Dupixent),dupilumab,Dupixent,PLAN_BASIC,MediAssist Basic,3,50.00,restricted,true,SYNTHETIC RULE: Demonstration criteria require documented diagnosis code on file.,true,SYNTHETIC DEMO: try generic first-line alternative B,SYNTHETIC LIMIT: 90 units per 90 days,SYNTHETIC_DEMO_DATA
+REC_0164,dupilumab (Dupixent),dupilumab,Dupixent,PLAN_PLUS,MediAssist Plus,2,20.00,covered,false,,false,,SYNTHETIC LIMIT: 30 units per 30 days,SYNTHETIC_DEMO_DATA
+REC_0165,dupilumab (Dupixent),dupilumab,Dupixent,PLAN_PREMIUM,MediAssist Premium,1,0.00,covered,false,,false,,SYNTHETIC LIMIT: 30 units per 30 days,SYNTHETIC_DEMO_DATA
+REC_0166,omalizumab (Xolair),omalizumab,Xolair,PLAN_BASIC,MediAssist Basic,3,50.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0167,omalizumab (Xolair),omalizumab,Xolair,PLAN_PLUS,MediAssist Plus,2,20.00,covered,false,,false,,SYNTHETIC LIMIT: 60 units per 30 days,SYNTHETIC_DEMO_DATA
+REC_0168,omalizumab (Xolair),omalizumab,Xolair,PLAN_PREMIUM,MediAssist Premium,1,0.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0169,fluticasone/salmeterol (Advair Diskus),fluticasone/salmeterol,Advair Diskus,PLAN_BASIC,MediAssist Basic,4,90.00,restricted,true,SYNTHETIC RULE: Demonstration criteria require documented diagnosis code on file.,false,,,SYNTHETIC_DEMO_DATA
+REC_0170,fluticasone/salmeterol (Advair Diskus),fluticasone/salmeterol,Advair Diskus,PLAN_PLUS,MediAssist Plus,3,40.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0171,fluticasone/salmeterol (Advair Diskus),fluticasone/salmeterol,Advair Diskus,PLAN_PREMIUM,MediAssist Premium,2,10.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0172,budesonide/formoterol (Symbicort),budesonide/formoterol,Symbicort,PLAN_BASIC,MediAssist Basic,5,150.00,restricted,true,SYNTHETIC RULE: Demonstration criteria require documented diagnosis code on file.,false,,SYNTHETIC LIMIT: 2 inhalers per 30 days,SYNTHETIC_DEMO_DATA
+REC_0173,budesonide/formoterol (Symbicort),budesonide/formoterol,Symbicort,PLAN_PLUS,MediAssist Plus,4,75.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0174,budesonide/formoterol (Symbicort),budesonide/formoterol,Symbicort,PLAN_PREMIUM,MediAssist Premium,3,30.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0175,tiotropium (Spiriva),tiotropium,Spiriva,PLAN_BASIC,MediAssist Basic,5,150.00,restricted,true,SYNTHETIC RULE: Demonstration criteria require recent lab results on file.,false,,SYNTHETIC LIMIT: 30 units per 30 days,SYNTHETIC_DEMO_DATA
+REC_0176,tiotropium (Spiriva),tiotropium,Spiriva,PLAN_PLUS,MediAssist Plus,4,75.00,restricted,true,SYNTHETIC RULE: Demonstration criteria require documented trial of a first-line agent.,true,SYNTHETIC DEMO: try two lower-tier demo alternatives,SYNTHETIC LIMIT: 30 units per 30 days,SYNTHETIC_DEMO_DATA
+REC_0177,tiotropium (Spiriva),tiotropium,Spiriva,PLAN_PREMIUM,MediAssist Premium,3,30.00,restricted,true,SYNTHETIC RULE: Demonstration criteria require recent lab results on file.,false,,SYNTHETIC LIMIT: 30 units per 30 days,SYNTHETIC_DEMO_DATA
+REC_0178,sumatriptan (Imitrex),sumatriptan,Imitrex,PLAN_BASIC,MediAssist Basic,3,50.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0179,sumatriptan (Imitrex),sumatriptan,Imitrex,PLAN_PLUS,MediAssist Plus,2,20.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0180,sumatriptan (Imitrex),sumatriptan,Imitrex,PLAN_PREMIUM,MediAssist Premium,1,0.00,covered,false,,false,,SYNTHETIC LIMIT: 90 units per 90 days,SYNTHETIC_DEMO_DATA
+REC_0181,rizatriptan (Maxalt),rizatriptan,Maxalt,PLAN_BASIC,MediAssist Basic,5,150.00,covered,false,,false,,SYNTHETIC LIMIT: 30 units per 30 days,SYNTHETIC_DEMO_DATA
+REC_0182,rizatriptan (Maxalt),rizatriptan,Maxalt,PLAN_PLUS,MediAssist Plus,4,75.00,restricted,true,SYNTHETIC RULE: Demonstration criteria require documented trial of a first-line agent.,false,,SYNTHETIC LIMIT: 2 inhalers per 30 days,SYNTHETIC_DEMO_DATA
+REC_0183,rizatriptan (Maxalt),rizatriptan,Maxalt,PLAN_PREMIUM,MediAssist Premium,3,30.00,covered,false,,false,,SYNTHETIC LIMIT: 2 inhalers per 30 days,SYNTHETIC_DEMO_DATA
+REC_0184,erenumab (Aimovig),erenumab,Aimovig,PLAN_BASIC,MediAssist Basic,5,150.00,covered,false,,false,,SYNTHETIC LIMIT: 2 inhalers per 30 days,SYNTHETIC_DEMO_DATA
+REC_0185,erenumab (Aimovig),erenumab,Aimovig,PLAN_PLUS,MediAssist Plus,4,75.00,restricted,true,SYNTHETIC RULE: Demonstration criteria require documented diagnosis code on file.,true,SYNTHETIC DEMO: try generic first-line alternative A,,SYNTHETIC_DEMO_DATA
+REC_0186,erenumab (Aimovig),erenumab,Aimovig,PLAN_PREMIUM,MediAssist Premium,3,30.00,restricted,true,SYNTHETIC RULE: Demonstration criteria require documented trial of a first-line agent.,true,SYNTHETIC DEMO: try two lower-tier demo alternatives,,SYNTHETIC_DEMO_DATA
+REC_0187,levetiracetam (Keppra),levetiracetam,Keppra,PLAN_BASIC,MediAssist Basic,5,150.00,covered,false,,false,,SYNTHETIC LIMIT: 60 units per 30 days,SYNTHETIC_DEMO_DATA
+REC_0188,levetiracetam (Keppra),levetiracetam,Keppra,PLAN_PLUS,MediAssist Plus,5,120.00,restricted,true,SYNTHETIC RULE: Demonstration criteria require documented diagnosis code on file.,false,,SYNTHETIC LIMIT: 90 units per 90 days,SYNTHETIC_DEMO_DATA
+REC_0189,levetiracetam (Keppra),levetiracetam,Keppra,PLAN_PREMIUM,MediAssist Premium,4,60.00,covered,false,,false,,SYNTHETIC LIMIT: 30 units per 30 days,SYNTHETIC_DEMO_DATA
+REC_0190,lamotrigine (Lamictal),lamotrigine,Lamictal,PLAN_BASIC,MediAssist Basic,2,25.00,covered,false,,false,,SYNTHETIC LIMIT: 1 pen per 28 days,SYNTHETIC_DEMO_DATA
+REC_0191,lamotrigine (Lamictal),lamotrigine,Lamictal,PLAN_PLUS,MediAssist Plus,1,5.00,covered,false,,false,,SYNTHETIC LIMIT: 60 units per 30 days,SYNTHETIC_DEMO_DATA
+REC_0192,lamotrigine (Lamictal),lamotrigine,Lamictal,PLAN_PREMIUM,MediAssist Premium,1,0.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0193,topiramate (Topamax),topiramate,Topamax,PLAN_BASIC,MediAssist Basic,3,50.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0194,topiramate (Topamax),topiramate,Topamax,PLAN_PLUS,MediAssist Plus,2,20.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0195,topiramate (Topamax),topiramate,Topamax,PLAN_PREMIUM,MediAssist Premium,1,0.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0196,aripiprazole (Abilify),aripiprazole,Abilify,PLAN_BASIC,MediAssist Basic,5,150.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0197,aripiprazole (Abilify),aripiprazole,Abilify,PLAN_PLUS,MediAssist Plus,5,120.00,restricted,true,SYNTHETIC RULE: Demonstration criteria require recent lab results on file.,false,,SYNTHETIC LIMIT: 1 pen per 28 days,SYNTHETIC_DEMO_DATA
+REC_0198,aripiprazole (Abilify),aripiprazole,Abilify,PLAN_PREMIUM,MediAssist Premium,4,60.00,covered,false,,false,,SYNTHETIC LIMIT: 90 units per 90 days,SYNTHETIC_DEMO_DATA
+REC_0199,quetiapine (Seroquel),quetiapine,Seroquel,PLAN_BASIC,MediAssist Basic,2,25.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0200,quetiapine (Seroquel),quetiapine,Seroquel,PLAN_PLUS,MediAssist Plus,1,5.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0201,quetiapine (Seroquel),quetiapine,Seroquel,PLAN_PREMIUM,MediAssist Premium,1,0.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0202,lurasidone (Latuda),lurasidone,Latuda,PLAN_BASIC,MediAssist Basic,5,150.00,covered,true,SYNTHETIC RULE: Demonstration criteria require specialist consultation note.,false,,,SYNTHETIC_DEMO_DATA
+REC_0203,lurasidone (Latuda),lurasidone,Latuda,PLAN_PLUS,MediAssist Plus,5,120.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0204,lurasidone (Latuda),lurasidone,Latuda,PLAN_PREMIUM,MediAssist Premium,4,60.00,restricted,true,SYNTHETIC RULE: Demonstration criteria require documented trial of a first-line agent.,false,,SYNTHETIC LIMIT: 60 units per 30 days,SYNTHETIC_DEMO_DATA
+REC_0205,duloxetine (Cymbalta),duloxetine,Cymbalta,PLAN_BASIC,MediAssist Basic,5,150.00,restricted,true,SYNTHETIC RULE: Demonstration criteria require specialist consultation note.,true,SYNTHETIC DEMO: try two lower-tier demo alternatives,SYNTHETIC LIMIT: 2 inhalers per 30 days,SYNTHETIC_DEMO_DATA
+REC_0206,duloxetine (Cymbalta),duloxetine,Cymbalta,PLAN_PLUS,MediAssist Plus,5,120.00,restricted,true,SYNTHETIC RULE: Demonstration criteria require recent lab results on file.,false,,,SYNTHETIC_DEMO_DATA
+REC_0207,duloxetine (Cymbalta),duloxetine,Cymbalta,PLAN_PREMIUM,MediAssist Premium,4,60.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0208,venlafaxine (Effexor XR),venlafaxine,Effexor XR,PLAN_BASIC,MediAssist Basic,5,150.00,covered,false,,false,,SYNTHETIC LIMIT: 2 inhalers per 30 days,SYNTHETIC_DEMO_DATA
+REC_0209,venlafaxine (Effexor XR),venlafaxine,Effexor XR,PLAN_PLUS,MediAssist Plus,4,75.00,covered,false,,false,,SYNTHETIC LIMIT: 60 units per 30 days,SYNTHETIC_DEMO_DATA
+REC_0210,venlafaxine (Effexor XR),venlafaxine,Effexor XR,PLAN_PREMIUM,MediAssist Premium,3,30.00,covered,false,,false,,SYNTHETIC LIMIT: 90 units per 90 days,SYNTHETIC_DEMO_DATA
+REC_0211,methylphenidate (Concerta),methylphenidate,Concerta,PLAN_BASIC,MediAssist Basic,2,25.00,covered,false,,false,,SYNTHETIC LIMIT: 2 inhalers per 30 days,SYNTHETIC_DEMO_DATA
+REC_0212,methylphenidate (Concerta),methylphenidate,Concerta,PLAN_PLUS,MediAssist Plus,1,5.00,covered,false,,false,,SYNTHETIC LIMIT: 30 units per 30 days,SYNTHETIC_DEMO_DATA
+REC_0213,methylphenidate (Concerta),methylphenidate,Concerta,PLAN_PREMIUM,MediAssist Premium,1,0.00,covered,false,,false,,SYNTHETIC LIMIT: 30 units per 30 days,SYNTHETIC_DEMO_DATA
+REC_0214,lisdexamfetamine (Vyvanse),lisdexamfetamine,Vyvanse,PLAN_BASIC,MediAssist Basic,5,150.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0215,lisdexamfetamine (Vyvanse),lisdexamfetamine,Vyvanse,PLAN_PLUS,MediAssist Plus,4,75.00,covered,false,,false,,SYNTHETIC LIMIT: 1 pen per 28 days,SYNTHETIC_DEMO_DATA
+REC_0216,lisdexamfetamine (Vyvanse),lisdexamfetamine,Vyvanse,PLAN_PREMIUM,MediAssist Premium,3,30.00,restricted,true,SYNTHETIC RULE: Demonstration criteria require documented contraindication to alternatives.,false,,SYNTHETIC LIMIT: 90 units per 90 days,SYNTHETIC_DEMO_DATA
+REC_0217,oxycodone (OxyContin),oxycodone,OxyContin,PLAN_BASIC,MediAssist Basic,4,90.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0218,oxycodone (OxyContin),oxycodone,OxyContin,PLAN_PLUS,MediAssist Plus,3,40.00,covered,false,,false,,SYNTHETIC LIMIT: 30 units per 30 days,SYNTHETIC_DEMO_DATA
+REC_0219,oxycodone (OxyContin),oxycodone,OxyContin,PLAN_PREMIUM,MediAssist Premium,2,10.00,covered,false,,false,,SYNTHETIC LIMIT: 2 inhalers per 30 days,SYNTHETIC_DEMO_DATA
+REC_0220,celecoxib (Celebrex),celecoxib,Celebrex,PLAN_BASIC,MediAssist Basic,4,90.00,covered,false,,false,,SYNTHETIC LIMIT: 30 units per 30 days,SYNTHETIC_DEMO_DATA
+REC_0221,celecoxib (Celebrex),celecoxib,Celebrex,PLAN_PLUS,MediAssist Plus,3,40.00,covered,false,,false,,SYNTHETIC LIMIT: 1 pen per 28 days,SYNTHETIC_DEMO_DATA
+REC_0222,celecoxib (Celebrex),celecoxib,Celebrex,PLAN_PREMIUM,MediAssist Premium,2,10.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0223,meloxicam (Mobic),meloxicam,Mobic,PLAN_BASIC,MediAssist Basic,3,50.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0224,meloxicam (Mobic),meloxicam,Mobic,PLAN_PLUS,MediAssist Plus,2,20.00,covered,false,,false,,SYNTHETIC LIMIT: 2 inhalers per 30 days,SYNTHETIC_DEMO_DATA
+REC_0225,meloxicam (Mobic),meloxicam,Mobic,PLAN_PREMIUM,MediAssist Premium,1,0.00,covered,false,,false,,SYNTHETIC LIMIT: 90 units per 90 days,SYNTHETIC_DEMO_DATA
+REC_0226,cyclobenzaprine (Flexeril),cyclobenzaprine,Flexeril,PLAN_BASIC,MediAssist Basic,2,25.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0227,cyclobenzaprine (Flexeril),cyclobenzaprine,Flexeril,PLAN_PLUS,MediAssist Plus,1,5.00,covered,false,,false,,SYNTHETIC LIMIT: 60 units per 30 days,SYNTHETIC_DEMO_DATA
+REC_0228,cyclobenzaprine (Flexeril),cyclobenzaprine,Flexeril,PLAN_PREMIUM,MediAssist Premium,1,0.00,covered,false,,false,,SYNTHETIC LIMIT: 30 units per 30 days,SYNTHETIC_DEMO_DATA
+REC_0229,ondansetron (Zofran),ondansetron,Zofran,PLAN_BASIC,MediAssist Basic,2,25.00,covered,false,,false,,SYNTHETIC LIMIT: 1 pen per 28 days,SYNTHETIC_DEMO_DATA
+REC_0230,ondansetron (Zofran),ondansetron,Zofran,PLAN_PLUS,MediAssist Plus,1,5.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0231,ondansetron (Zofran),ondansetron,Zofran,PLAN_PREMIUM,MediAssist Premium,1,0.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0232,famotidine (Pepcid),famotidine,Pepcid,PLAN_BASIC,MediAssist Basic,4,90.00,restricted,true,SYNTHETIC RULE: Demonstration criteria require documented contraindication to alternatives.,false,,,SYNTHETIC_DEMO_DATA
+REC_0233,famotidine (Pepcid),famotidine,Pepcid,PLAN_PLUS,MediAssist Plus,3,40.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0234,famotidine (Pepcid),famotidine,Pepcid,PLAN_PREMIUM,MediAssist Premium,2,10.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0235,mesalamine (Lialda),mesalamine,Lialda,PLAN_BASIC,MediAssist Basic,3,50.00,restricted,true,SYNTHETIC RULE: Demonstration criteria require documented contraindication to alternatives.,false,,SYNTHETIC LIMIT: 90 units per 90 days,SYNTHETIC_DEMO_DATA
+REC_0236,mesalamine (Lialda),mesalamine,Lialda,PLAN_PLUS,MediAssist Plus,2,20.00,covered,false,,false,,,SYNTHETIC_DEMO_DATA
+REC_0237,mesalamine (Lialda),mesalamine,Lialda,PLAN_PREMIUM,MediAssist Premium,1,0.00,covered,false,,false,,SYNTHETIC LIMIT: 30 units per 30 days,SYNTHETIC_DEMO_DATA
+REC_0238,ledipasvir/sofosbuvir (Harvoni),ledipasvir/sofosbuvir,Harvoni,PLAN_BASIC,MediAssist Basic,4,90.00,covered,true,SYNTHETIC RULE: Demonstration criteria require documented contraindication to alternatives.,false,,,SYNTHETIC_DEMO_DATA
+REC_0239,ledipasvir/sofosbuvir (Harvoni),ledipasvir/sofosbuvir,Harvoni,PLAN_PLUS,MediAssist Plus,3,40.00,covered,false,,false,,SYNTHETIC LIMIT: 30 units per 30 days,SYNTHETIC_DEMO_DATA
+REC_0240,ledipasvir/sofosbuvir (Harvoni),ledipasvir/sofosbuvir,Harvoni,PLAN_PREMIUM,MediAssist Premium,2,10.00,covered,false,,false,,SYNTHETIC LIMIT: 1 pen per 28 days,SYNTHETIC_DEMO_DATA
