@@ -6,7 +6,16 @@ from typing import Any
 
 from qdrant_client import QdrantClient
 from qdrant_client.http.exceptions import ResponseHandlingException, UnexpectedResponse
-from qdrant_client.models import Distance, PointStruct, VectorParams
+from qdrant_client.models import (
+    Distance,
+    FieldCondition,
+    Filter,
+    FilterSelector,
+    HasIdCondition,
+    MatchValue,
+    PointStruct,
+    VectorParams,
+)
 
 from src.config import settings
 from src.retrieval.embeddings import EmbeddingService
@@ -55,19 +64,14 @@ class QdrantVectorStore:
         if not isinstance(vector, list):
             raise TypeError(f"{label} must be a list of floats, got {type(vector).__name__}.")
         if len(vector) != self.vector_size:
-            raise ValueError(
-                f"{label} has dimension {len(vector)}, expected {self.vector_size}."
-            )
+            raise ValueError(f"{label} has dimension {len(vector)}, expected {self.vector_size}.")
         for position, value in enumerate(vector):
             if isinstance(value, bool) or not isinstance(value, (int, float)):
                 raise TypeError(
-                    f"{label}[{position}] must be a numeric value, "
-                    f"got {type(value).__name__}."
+                    f"{label}[{position}] must be a numeric value, got {type(value).__name__}."
                 )
             if not math.isfinite(value):
-                raise ValueError(
-                    f"{label}[{position}] must be finite, got {value}."
-                )
+                raise ValueError(f"{label}[{position}] must be finite, got {value}.")
 
     @staticmethod
     def _validate_point_id(point_id: Any, label: str) -> None:
@@ -97,8 +101,7 @@ class QdrantVectorStore:
         """Create the collection (cosine distance). Raises if it already exists."""
         if self.collection_exists():
             raise VectorStoreError(
-                f"Collection '{self.collection_name}' already exists; "
-                "it will not be overwritten."
+                f"Collection '{self.collection_name}' already exists; it will not be overwritten."
             )
         try:
             self._client.create_collection(
@@ -155,8 +158,8 @@ class QdrantVectorStore:
             raise TypeError("vectors and payloads must be lists.")
         if len(vectors) != len(payloads):
             raise ValueError(
-                f"vectors ({len(vectors)}) and payloads ({len(payloads)})" 
-		"must have the same length."
+                f"vectors ({len(vectors)}) and payloads ({len(payloads)}) "
+                "must have the same length."
             )
         if ids is not None:
             if not isinstance(ids, list):
@@ -179,9 +182,7 @@ class QdrantVectorStore:
         for index, (vector, payload) in enumerate(zip(vectors, payloads)):
             self._validate_vector(vector, f"vectors[{index}]")
             if not isinstance(payload, dict):
-                raise TypeError(
-                    f"payloads[{index}] must be a dict, got {type(payload).__name__}."
-                )
+                raise TypeError(f"payloads[{index}] must be a dict, got {type(payload).__name__}.")
 
         points = [
             PointStruct(id=point_id, vector=vector, payload=payload)
@@ -196,6 +197,47 @@ class QdrantVectorStore:
         except (UnexpectedResponse, ResponseHandlingException) as exc:
             raise self._wrap("upsert documents", exc) from exc
         return point_ids
+
+    def delete_points_by_source(
+        self,
+        source: str,
+        preserve_ids: list[int | str] | None = None,
+    ) -> None:
+        """Delete every point whose ``source`` payload equals ``source``.
+
+        Points whose IDs appear in ``preserve_ids`` are kept. Points with any
+        other ``source`` value (or no ``source`` at all) are never touched, and
+        the collection itself is left in place.
+
+        Raises:
+            TypeError: If ``source`` is not a string or ``preserve_ids`` is not
+                a list (or None).
+            ValueError: If ``source`` is empty or a preserved ID is invalid.
+            VectorStoreError: If the Qdrant delete fails.
+        """
+        if not isinstance(source, str):
+            raise TypeError(f"source must be a str, got {type(source).__name__}.")
+        if not source:
+            raise ValueError("source must be a non-empty string.")
+        if preserve_ids is not None:
+            if not isinstance(preserve_ids, list):
+                raise TypeError("preserve_ids must be a list or None.")
+            for index, point_id in enumerate(preserve_ids):
+                self._validate_point_id(point_id, f"preserve_ids[{index}]")
+
+        must_not = [HasIdCondition(has_id=list(preserve_ids))] if preserve_ids else None
+        points_filter = Filter(
+            must=[FieldCondition(key="source", match=MatchValue(value=source))],
+            must_not=must_not,
+        )
+        try:
+            self._client.delete(
+                collection_name=self.collection_name,
+                points_selector=FilterSelector(filter=points_filter),
+                wait=True,
+            )
+        except (UnexpectedResponse, ResponseHandlingException) as exc:
+            raise self._wrap(f"delete points for source '{source}'", exc) from exc
 
     def search(self, query_vector: list[float], top_k: int = 5) -> list[dict[str, Any]]:
         """Return up to ``top_k`` matches as dicts with ``id``, ``score`` and ``payload``."""

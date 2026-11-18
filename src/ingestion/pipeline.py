@@ -81,7 +81,12 @@ class DocumentIngestionPipeline:
         return str(uuid.uuid5(uuid.NAMESPACE_URL, name))
 
     def ingest_pdf(self, file_path: str | Path) -> dict[str, Any]:
-        """Ingest a PDF into the vector store.
+        """Ingest a PDF into the vector store, replacing its previous chunks.
+
+        New chunks are embedded and upserted first. Only after every batch has
+        been upserted successfully are obsolete points of the same ``source``
+        deleted; points of other sources are never touched. If embedding or
+        upserting fails, the exception propagates and nothing is deleted.
 
         Args:
             file_path: Path to a ``.pdf`` file.
@@ -96,9 +101,7 @@ class DocumentIngestionPipeline:
                 vector store are propagated unchanged.
         """
         if not isinstance(file_path, (str, Path)):
-            raise TypeError(
-                f"file_path must be a str or Path, got {type(file_path).__name__}."
-            )
+            raise TypeError(f"file_path must be a str or Path, got {type(file_path).__name__}.")
 
         source = Path(file_path).name
         pages = self.pdf_loader.load_pdf(file_path)
@@ -112,6 +115,10 @@ class DocumentIngestionPipeline:
             "point_ids": [],
         }
         if not chunks:
+            # Empty document: remove whatever was previously indexed for it.
+            # A missing collection means there is nothing to remove.
+            if self.vector_store.collection_exists():
+                self.vector_store.delete_points_by_source(source)
             return result
 
         self.vector_store.ensure_collection()
@@ -135,6 +142,10 @@ class DocumentIngestionPipeline:
             used_ids = self.vector_store.upsert_documents(vectors, payloads, batch_ids)
             point_ids.extend(str(point_id) for point_id in used_ids)
             vectors_upserted += len(used_ids)
+
+        # Reached only if every batch above succeeded.
+        preserve_ids: list[int | str] = list(point_ids)
+        self.vector_store.delete_points_by_source(source, preserve_ids=preserve_ids)
 
         result["vectors_upserted"] = vectors_upserted
         result["point_ids"] = point_ids
