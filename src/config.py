@@ -27,6 +27,10 @@ class Settings(BaseSettings):
     embedding_model: str = "BAAI/bge-small-en-v1.5"
     embedding_device: str = "cpu"
 
+    # Reranker
+    reranker_model: str = "cross-encoder/ms-marco-MiniLM-L-6-v2"
+    reranker_device: str = "cpu"
+
     # Vector store (Qdrant)
     qdrant_url: str = "http://localhost:6333"
     qdrant_collection: str = "mediassist_policies"
